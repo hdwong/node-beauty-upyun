@@ -16,6 +16,12 @@ let upyun = {
     config = core.getConfig(serviceName);
     client = new m(config.name || '', config.user || '', config.password || '',
         'v0', 'legacy');
+    if (!config.enable_api) {
+      // disable upyun api
+      delete upyun.post_file;
+      delete upyun.post_copy;
+      delete upyun.delete_file;
+    }
   },
   upload: (type, filename, content, mime, next) => {
     let dir, extname;
