@@ -1,0 +1,30 @@
+{
+  "name": "node-beauty-upyun",
+  "version": "1.0.0",
+  "description": "UPYUN storage module for node-beauty",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdwong/node-beauty-upyun.git"
+  },
+  "dependencies": {
+    "upyun": "*",
+    "request": "*",
+    "mime": "*"
+  },
+  "keywords": [
+    "node-beauty",
+    "upyun",
+    "storage"
+  ],
+  "author": "Bun Wong <bunwong@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hdwong/node-beauty-upyun/issues"
+  },
+  "homepage": "https://github.com/hdwong/node-beauty-upyun#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
