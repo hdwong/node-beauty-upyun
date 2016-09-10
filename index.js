@@ -30,7 +30,7 @@ let upyun = {
         pad2(d.getDate()) + '/';
     extname = require('path').extname(filename);
     mime = mime || require('mime').lookup(extname);
-    dir += core.randomString(16) + extname;
+    dir += core.randomString(parseInt(config.random_len || 4, 10)) + extname;
     client.uploadFile('/' + dir, content, mime, true, (error, result) => {
       upyun.assert(error);
       if (result.error !== undefined) {
