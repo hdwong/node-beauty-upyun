@@ -75,10 +75,7 @@ let upyun = {
   delete: (filename, next) => {
     client.removeFile('/' + filename, (error, result) => {
       upyun.assert(error);
-      if (result.error !== undefined) {
-        upyun.assert(result.error.message);
-      }
-      if (result.statusCode != 200) {
+      if (result.error !== undefined || result.statusCode != 200) {
         return next(false);
       }
       next(true);
